@@ -3,7 +3,7 @@ import React from 'react';
 class Login extends (props)
 {
   return(
-    <div class="wrapper">
+
       <div class='splash block'>
         <h1>Login</h1>
         <form onSubmit={submit}>
@@ -19,7 +19,6 @@ class Login extends (props)
           <button type='submit' class='btn btn-light right'>Login</button>
         </form>
       </div>
-    </div>
   );
 }
 
