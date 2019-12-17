@@ -4,20 +4,21 @@ import logo from './logo.svg';
 import './App.css';
 import { createStore, applyMiddleware } from 'redux';
 import Login from './components/Login'
-
+import NavBar from './components/NavBar';
+import LiveDataView from './components/LiveDataView';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <NavBar />
       <Switch>
         <Route exact path='/'
-          component={Login} />
-        <Route exact path='/database'
+          component={LiveDataView} />
+        {/* <Route exact path='/database'
           component={Database} />
         <Route exact path='/charts'
-          component={Charts} />
+          component={Charts} /> */}
       </Switch>
     </div>
   );
