@@ -10017,6 +10017,8 @@ var trafficArray = [{
 ];
 
 var customersArray = customers.customers;
+var STARTDATE = new Date(2018, 10, 1);
+var ENDDATE = new Date(2018, 10, 31);
 
 export const INITIAL_STATE = {
   orders: ordersArray,
@@ -10026,8 +10028,7 @@ export const INITIAL_STATE = {
   
 };
 
-var STARTDATE = new Date(2018, 10, 1);
-var ENDDATE = new Date(2018, 10, 31);
+
 const CENTEROFWORLD = {
   latitude: 41.2284,
   longitude: 80.9098
