@@ -5,10 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import rootReducer from './reducers/index';
 import {HashRouter} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import configureStore from './store/configureStore';
+import  * as InitialState from '../src/constants/InitialState';
+const { customers, ordersArray, trafficArray } = InitialState;
 
 // Create browser history to use in the Redux store
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
@@ -17,7 +18,13 @@ const history = createBrowserHistory({
 });
 
 // Get the application-wide store instance, prepopulating with state from the server where available.
-const initialState = window.initialReduxState;
+let initialState = window.initialReduxState;
+initialState = {
+  ...initialState,
+  customers: customers,
+  orders: ordersArray,
+  traffic: trafficArray
+}
 const store = configureStore(history, initialState);
 
 ReactDOM.render(
