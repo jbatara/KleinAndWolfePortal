@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { Switch } from 'react-router';
 
 function NavBar(props) {
   return navBarType(props.client);
@@ -8,7 +7,7 @@ function NavBar(props) {
 
 function navBarType(company){
   switch (company) {
-    case 'bridge_city_roasters':
+    case 'Bridge City Roasters':
       return (<nav className="navbar navbar-expand-lg navbar-light bg-transparent">
         <a className="navbar-brand" href="#/">Klein & Wolfe | Bridge City Roasters</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,4 +59,10 @@ function navBarType(company){
   }
 }
 
-export default connect()(NavBar);
+const mapPropsToState = state =>{
+  return{
+    client: state.user.userName
+  }
+}
+
+export default connect(mapPropsToState)(NavBar);
