@@ -5,7 +5,7 @@ import  * as InitialState from '../constants/InitialState';
 var moment = require('moment');
 const { customers, ordersArray, trafficArray, PRODUCTS } = InitialState;
 
-function orderReducer(state ={date: ordersArray, meta: moment()}, action){
+function orderReducer(state ={data: ordersArray, meta: moment()}, action){
   return state;
 }
 function productsReducer(state=PRODUCTS, action){
