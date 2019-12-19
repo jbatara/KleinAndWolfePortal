@@ -61,7 +61,7 @@ function navBarType(company){
 
 const mapPropsToState = state =>{
   return{
-    client: state.user.userName
+    client: state.user.company
   }
 }
 
