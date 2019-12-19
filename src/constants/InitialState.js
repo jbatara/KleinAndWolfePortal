@@ -1,7 +1,6 @@
 const randomLocation = require('random-location');
 var fs = require('fs');
-var customers = {
-  "customers": [{
+export const customers =[{
       "id": 1,
       "name": "Customer1",
       "date": "2018-11-13T00:16:40.256Z",
@@ -901,10 +900,9 @@ var customers = {
         "longitude": 80.88311915691554
       }
     }
-  ]
-};
+  ];
 
-var ordersArray = [{
+export const ordersArray = [{
     "id": 1,
     "date": "2018-11-01T20:14:18.479Z",
     "subtotal": 131,
@@ -4460,7 +4458,7 @@ var ordersArray = [{
   }
 ];
 
-var trafficArray = [{
+export const trafficArray = [{
     "id": 1,
     "date": "2018-11-25T10:48:36.651Z",
     "location": {
@@ -10016,26 +10014,15 @@ var trafficArray = [{
   }
 ];
 
-var customersArray = customers.customers;
 var STARTDATE = new Date(2018, 10, 1);
 var ENDDATE = new Date(2018, 10, 31);
-
-export const INITIAL_STATE = {
-  orders: ordersArray,
-  traffic: trafficArray,
-  startDate: STARTDATE,
-  endDate: ENDDATE
-  
-};
-
-
 const CENTEROFWORLD = {
   latitude: 41.2284,
   longitude: 80.9098
 }
 const SEARCHRADIUS = 50000;
 
-const PRODUCTS = [{
+export const PRODUCTS = [{
   id: 1,
   name: 'Harar Highlands',
   roast: 'Dark',
@@ -10072,6 +10059,16 @@ const PRODUCTS = [{
   type: 'guatamala',
   price: 11.00
 }]
+
+export const INITIAL_STATE = {
+  state: {
+  orders: ordersArray,
+  traffic: trafficArray,
+  startDate: STARTDATE,
+  endDate: ENDDATE,
+  products: PRODUCTS
+}
+};
 
 function randomDate(start, end) {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
