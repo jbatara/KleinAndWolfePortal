@@ -6,6 +6,9 @@ import { createStore, applyMiddleware } from 'redux';
 import Login from './components/Login'
 import NavBar from './components/NavBar';
 import LiveDataView from './components/LiveDataView';
+import Home from './components/Home';
+import Traffic from './components/Traffic';
+import Orders from './components/Orders';
 
 
 function App() {
@@ -14,11 +17,13 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path='/'
+          component={Home} />
+        <Route exact path='/analytics'
           component={LiveDataView} />
-        {/* <Route exact path='/database'
-          component={Database} />
-        <Route exact path='/charts'
-          component={Charts} /> */}
+        <Route exact path='/traffic'
+          component={Traffic} />
+          <Route exact path='/orders'
+          component={Orders} />
       </Switch>
     </div>
   );
