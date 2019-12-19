@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 function Home(props){
   return (
-    <React.Fragment>
+    <div className='container'>
       <h1>Welcome, {props.user.userName}.</h1>
       <table className='table table-hover'>
         <tr>
@@ -19,7 +19,7 @@ function Home(props){
           <td><h3>{props.trafficMeta}</h3></td>
         </tr>
       </table>
-    </React.Fragment>
+    </div>
   );
 }
 
