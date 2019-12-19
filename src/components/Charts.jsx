@@ -9,7 +9,7 @@ function Charts(props) {
     <div className='col' style={style}>
       <h2></h2>
       {chartTitle(props.type, props.weekNumber)}
-      {chartByType(props.type, props.data.orders, props.weekNumber, props.products.products)}
+      {chartByType(props.type, props.data, props.weekNumber, props.products)}
     </div>
 
   );
