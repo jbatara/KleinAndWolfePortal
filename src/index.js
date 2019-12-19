@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import {HashRouter} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
@@ -18,9 +17,8 @@ const history = createBrowserHistory({
 });
 
 // Get the application-wide store instance, prepopulating with state from the server where available.
-let initialState = window.initialReduxState;
-initialState = {
-  ...initialState,
+const initialState = {
+  ...window.initialReduxState,
   customers: customers,
   orders: ordersArray,
   traffic: trafficArray
