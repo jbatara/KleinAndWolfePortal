@@ -14,7 +14,7 @@ function LiveDataView(props) {
 const mapStateToProps = state => {
   return {
     orders: state.orders.data,
-    products: state.products
+    products: state.products.data
   }
 }
 
