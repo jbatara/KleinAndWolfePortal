@@ -5,17 +5,17 @@ import  * as InitialState from '../constants/InitialState';
 var moment = require('moment');
 const { customers, ordersArray, trafficArray, PRODUCTS } = InitialState;
 
-function orderReducer(state ={data: ordersArray, meta: moment()}, action){
+function orderReducer(state ={data: ordersArray, meta: moment().format('llll')}, action){
   return state;
 }
 function productsReducer(state=PRODUCTS, action){
   return state;
 }
-function trafficReducer(state={data:trafficArray, meta: moment()} , action){
+function trafficReducer(state={data:trafficArray, meta: moment().format('llll')} , action){
   return state;
 }
 
-function customerReducer(state={data:customers, meta: moment()}, action){
+function customerReducer(state={data:customers, meta: moment().format('llll')}, action){
   return state;
 }
 
