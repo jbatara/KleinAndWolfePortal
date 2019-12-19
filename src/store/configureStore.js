@@ -2,19 +2,20 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 // import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import  * as InitialState from '../constants/InitialState';
+var moment = require('moment');
 const { customers, ordersArray, trafficArray, PRODUCTS } = InitialState;
 
-function orderReducer(state =ordersArray, action){
+function orderReducer(state ={date: ordersArray, meta: moment()}, action){
   return state;
 }
 function productsReducer(state=PRODUCTS, action){
   return state;
 }
-function trafficReducer(state=trafficArray, action){
+function trafficReducer(state={data:trafficArray, meta: moment()} , action){
   return state;
 }
 
-function customerReducer(state=customers, action){
+function customerReducer(state={data:customers, meta: moment()}, action){
   return state;
 }
 
