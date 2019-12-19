@@ -13,7 +13,7 @@ function LiveDataView(props) {
 
 const mapStateToProps = state => {
   return {
-    orders: state.orders,
+    orders: state.orders.data,
     products: state.products
   }
 }
