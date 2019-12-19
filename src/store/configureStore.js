@@ -4,17 +4,31 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import  * as InitialState from '../constants/InitialState';
 const { customers, ordersArray, trafficArray, PRODUCTS } = InitialState;
 
-function orderReducer(state = {orders: ordersArray}, action){
+function orderReducer(state = {ordersArray}, action){
   return state;
 }
-function productsReducer(state={products: PRODUCTS}, action){
+function productsReducer(state={PRODUCTS}, action){
+  return state;
+}
+function trafficReducer(state={trafficArray}, action){
+  return state;
+}
+
+function customerReducer(state={customers}, action){
+  return state;
+}
+
+function userReducer(state={userName: 'cmulaney', company: 'Bridge City Roasters'}, action){
   return state;
 }
 
 export default function configureStore (history, initialState) {
   const reducers = {
     order: orderReducer,
-    products: productsReducer
+    products: productsReducer,
+    user: userReducer,
+    cusomter: customerReducer,
+    traffic: trafficReducer
   };
 
   const middleware = [
