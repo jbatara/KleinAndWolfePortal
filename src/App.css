@@ -43,3 +43,7 @@
 .col{
   flex:3
 }
+
+.wrapper{
+  padding: 10, 20, 20, 10
+}
