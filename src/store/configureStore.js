@@ -8,7 +8,7 @@ const { customers, ordersArray, trafficArray, PRODUCTS } = InitialState;
 function orderReducer(state ={data: ordersArray, meta: moment().format('llll')}, action){
   return state;
 }
-function productsReducer(state=PRODUCTS, action){
+function productsReducer(state={data: PRODUCTS, meta: moment().format('llll')}, action){
   return state;
 }
 function trafficReducer(state={data:trafficArray, meta: moment().format('llll')} , action){
