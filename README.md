@@ -1,68 +1,80 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# _Klein and Wolfe: Client Side Portal_
 
-## Available Scripts
+#### _A Online Client Management System, December 23,2019_
 
-In the project directory, you can run:
+#### _By **Jennifer Batara**_
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This application is a work in progress. Some of the functionality described here is still under development.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This application is a serverless React web application for the ficitonal management consulting company, Klein and Wolfe. As a management consulting firm specializing in ecommerce strategy, they require a portal that can organize all their Service Provider (partner) relationships with their different brand clients. The portal aims to streamline the process to transfer raw data from the service providers to the in-house consulting team for analysis, and finally served to the client as real time analytics. This app incorporates a few different views: an owner view, an employee view, and a client view. The owner will have administrative powers to oversee all data and projects. Employees are only allowed to see data for projects which they are assigned. Clients will only be able to see data that belongs to them. 
 
-### `npm test`
+The API that serves the data to this application can be found [here](https://github.com/jbatara/KleinAndWolfeAPI.git).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## User Stories
+- As the owner, I want to be able to see a list of all my partners, clients, and employees and be abel to have the ultimate administrator authority to edit permissions, etc.
+- As the owner, I want to be able to see a dashboard of all current projects and most recent data recieved, with any length of time since the last data dump longer than 24 hours highlighted.
+- As an employee, I want to be able to see all the projects that I am currently working on, as well as a dashboard of the most recent data recieved and a warning if it has been more than 24 hours.
+- As a brand, I want to be able to see a live stream of my data and live dynamic analytics. 
+- As a brand, I also want to be able to see my contact person at Klein and Wolfe.
 
-### `npm run build`
+## Client Side Routing and Component Design
+![Routing Component Scheme](src/img/191223_ComponentTree.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup/Installation Requirements
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-   Internet Connection
+-   Internet browser
+-   Bash Terminal
+-   Node.js
+-   Node Package Manager (npm)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you do not have the Node.js installed on your computer, please install it by following the directions for your operating system [here](https://nodejs.org/). The Node.js version used for this project is v10.16.0. NPM is installed with Node.js. The current version of npm used for this project is v6.11.3. If you need npm support, visit npm's website [here](https://www.npmjs.com/get-npm).
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To view locally please copy the link to [this repo](https://github.com/jbatara/KleinAndWolfePortal) and type the following command into your Bash terminal:
+```
+$git clone repo_url
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+with repo_url being the url that was just copied. To open the console app, navigate to the local directory which the online repository was cloned to using the command
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$cd KleinAndWolfePortal
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Once in the correct repository, and confirming that you have Node.js installed, install the required dependencies using the following command
+```
+$npm i
+```
 
-## Learn More
+Once npm has restored the required dependencies, run the app with the command
+```
+$npm start
+```
+Navigate to the [local host link](http://localhost:3000) and enjoy!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Known Bugs
 
-### Code Splitting
+_There are currenly no bugs reported._
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Support and contact details
 
-### Analyzing the Bundle Size
+Please feel free to contact the developer by raising a new [issue](https://github.com/jbatara/KleinAndWolfePortal/issues/new) on the github repo. You can browse the current issues [here](https://github.com/jbatara/KleinAndWolfePortal/issues).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Technologies Used
 
-### Making a Progressive Web App
+* Javascript
+* Node.js
+* React
+* Webpack
+* Moment.js
+* Nivo
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### License
 
-### Advanced Configuration
+_MIT_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2019 **_Jennifer Batara_**
